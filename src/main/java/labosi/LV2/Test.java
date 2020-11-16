@@ -5,6 +5,8 @@
  */
 package labosi.LV2;
 
+import static labosi.LV2.Zaposlenik.staticnaZarada;
+
 /**
  *
  * @author Bole
@@ -24,7 +26,11 @@ public class Test {
         //TEST ZARULJE
         
         //TEST ZAPOSLENIKA
-        
+        Zaposlenik zaposlenik = new Zaposlenik();
+        zaposlenik.setPlaca(3000);
+        zaposlenik.setStaz(3);
+        zaposlenik.zarada();
+        staticnaZarada(zaposlenik);
         //TEST ZAPOSLENIKA
     }
 }

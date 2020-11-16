@@ -15,6 +15,11 @@ public class Zaposlenik {
     private int starost;
     private int placa;
 
+    public Zaposlenik() {
+    }
+
+    
+    
     public Zaposlenik(int staz, int starost, int placa) {
         this.staz = staz;
         this.starost = starost;
@@ -46,10 +51,14 @@ public class Zaposlenik {
     }
     
     public void zarada(){
-      
+      int ukupnaPlaca;
+        ukupnaPlaca = (staz*12) * placa;
+        System.out.println("Ukupna zarada:" + ukupnaPlaca);
     }
     
     public static void staticnaZarada(Zaposlenik zarada){
-        
+        int ukupnaPlaca;
+        ukupnaPlaca = zarada.placa * (12 * zarada.staz);
+        System.out.println("Ukupna zarada:" + ukupnaPlaca);
     }
 }
