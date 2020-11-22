@@ -13,14 +13,15 @@ import java.util.Vector;
  *
  * @author Bole
  */
-public class LV3 {
+public class Objekat {
 
     public static Scanner scanner = new Scanner(System.in);
+    public static Random random = new Random();
 
-    public static void main(String[] args) {
-
-        int n = 0, m = 0, izbornik = 1;
-        Random random = new Random();
+    
+    
+    public int[][] matrica() {
+        int m = 0;
         do {
             try {
                 System.out.println("Unesite broj elemenata kvadratne matrice, broj između 1 i 5");
@@ -38,7 +39,11 @@ public class LV3 {
             }
             System.out.println();
         }
+        return matrica;
+    }
 
+    public Vector<Integer> vektor() {
+        int n = 0;
         do {
             try {
                 System.out.println("Unesite broj maksimalnog broja elemenata vektora, broj između 2 i 10");
@@ -54,15 +59,19 @@ public class LV3 {
         }
         System.out.print(v);
         System.out.println();
+        return v;
+    }
 
+    public void izbornik(int[][] matrica, Vector<Integer> v) {
+        int izbornik = 1;
         do {
             try {
-                System.out.println("---------------------------------------------------------\n"+
-                        "1. Izračun aritmetičke sredine sporedne dijagonale.\n"
+                System.out.println("---------------------------------------------------------\n"
+                        + "1. Izračun aritmetičke sredine sporedne dijagonale.\n"
                         + "2. Izračun sume neparnih elemenata prvog retka i prvog stupca matrice.\n"
                         + "3. Ispis svih brojeva na parnim indeksima vekora.\n"
-                        + "Unesite bilo koji drugi broj za izlaz.\n"+
-                        "---------------------------------------------------------\n");
+                        + "Unesite bilo koji drugi broj za izlaz.\n"
+                        + "---------------------------------------------------------\n");
                 izbornik = scanner.nextInt();
             } catch (Exception e) {
                 scanner.next();
@@ -86,7 +95,7 @@ public class LV3 {
         } while (izbornik >= 1 && izbornik <= 3);
     }
 
-    public static void aritmetickaSredina(int[][] matrica) {
+    public void aritmetickaSredina(int[][] matrica) {
         float suma = 0, brojac = 0;
         for (int i = 0; i < matrica.length; i++) {
             for (int j = 0; j < matrica.length; j++) {
@@ -100,7 +109,7 @@ public class LV3 {
         System.out.println("Aritmetička sredina sporedne dijagonale je: " + suma);
     }
 
-    public static void sumaNeparnihElemenata(int[][] matrica) {
+    public void sumaNeparnihElemenata(int[][] matrica) {
         int suma = 0;
         boolean check = false;
         for (int i = 0; i < matrica.length; i++) {
@@ -121,7 +130,7 @@ public class LV3 {
         }
     }
 
-    public static void ispisParnihIndeksa(Vector<Integer> v) {
+    public void ispisParnihIndeksa(Vector<Integer> v) {
         System.out.println("Ispis brojeva koji se nalaze na parnom indeksu vektora: ");
         for (int i = 1; i < v.size(); i++) {
             if ((float) i % 2 != 0) {
