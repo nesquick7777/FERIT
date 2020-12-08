@@ -46,6 +46,10 @@ public class Objekat {
         int n = 0;
         do {
             try {
+                
+            } catch (Exception e) {
+            }
+            try {
                 System.out.println("Unesite broj maksimalnog broja elemenata vektora, broj između 2 i 10");
                 n = scanner.nextInt();
             } catch (Exception e) {
