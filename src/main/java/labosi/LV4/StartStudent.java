@@ -19,7 +19,7 @@ import java.io.ObjectOutputStream;
  *
  * @author Bole
  */
-public class Start {
+public class StartStudent {
 
     public static void main(String[] args) throws FileNotFoundException, IOException {
         Faker faker = new Faker();
