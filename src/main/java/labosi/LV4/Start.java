@@ -73,8 +73,7 @@ public class Start {
                 c.printStackTrace();
                 return;
             }
-            System.out.println(j + 1 + ".");
-            System.out.println("Deserialized Student...");
+            System.out.println((j+1)+". "+"Deserialized Student...");
             System.out.println("Ime: " + student.getIme());
             System.out.println("Prezime: " + student.getPrezime());
             System.out.println("Fakultet: " + student.getFakultet());
