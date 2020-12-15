@@ -42,52 +42,48 @@ public class StartStudent {
 
         System.out.println();
 
-        FileOutputStream fileOut = new FileOutputStream("D:\\Downloads\\student.ser");
-        ObjectOutputStream out = new ObjectOutputStream(fileOut);
-        int brojac = 0;
-        for (Student test : studenti) {
-            try {
-                out.writeObject(test);
-                brojac++;
-                System.out.println(brojac + ". " + "Serialized data is saved in Downloads");
-            } catch (IOException i) {
-                i.printStackTrace();
+        try (FileOutputStream fileOut = new FileOutputStream("D:\\Downloads\\student.ser");
+                ObjectOutputStream out = new ObjectOutputStream(fileOut)) {
+            int brojac = 0;
+            for (Student test : studenti) {
+                try {
+                    out.writeObject(test);
+                    brojac++;
+                    System.out.println(brojac + ". " + "Serialized data is saved in Downloads");
+                } catch (IOException i) {
+                }
             }
         }
-        out.close();
-        fileOut.close();
+        
 
         student = null;
-        FileInputStream fileIn = new FileInputStream("D:\\Downloads\\student.ser");
-        ObjectInputStream in = new ObjectInputStream(fileIn);
-        double prosjek = 0;
-        for (int j = 0; j < 10; j++) {
-            try {
-                student = (Student) in.readObject();
-                prosjek += student.getProsjecna_ocjena();
-            } catch (IOException i) {
-                i.printStackTrace();
-                return;
-            } catch (ClassNotFoundException c) {
-                System.out.println("Student class not found");
-                c.printStackTrace();
-                return;
+        try (FileInputStream fileIn = new FileInputStream("D:\\Downloads\\student.ser"); 
+                ObjectInputStream in = new ObjectInputStream(fileIn)) {
+            double prosjek = 0;
+            for (int j = 0; j < 10; j++) {
+                try {
+                    student = (Student) in.readObject();
+                    prosjek += student.getProsjecna_ocjena();
+                } catch (IOException i) {
+                    return;
+                } catch (ClassNotFoundException c) {
+                    System.out.println("Student class not found");
+                    return;
+                }
+                System.out.println((j+1)+". "+"Deserialized Student...");
+                System.out.println("Ime: " + student.getIme());
+                System.out.println("Prezime: " + student.getPrezime());
+                System.out.println("Fakultet: " + student.getFakultet());
+                System.out.println("Smjer: " + student.getSmjer());
+                System.out.println("Godina: " + student.getGodina());
+                System.out.println("Maticni broj: " + student.getMaticniBroj());
+                System.out.println("Ocjena: " + student.getProsjecna_ocjena());
+                System.out.println("-------------------------------------------------------");
             }
-            System.out.println((j+1)+". "+"Deserialized Student...");
-            System.out.println("Ime: " + student.getIme());
-            System.out.println("Prezime: " + student.getPrezime());
-            System.out.println("Fakultet: " + student.getFakultet());
-            System.out.println("Smjer: " + student.getSmjer());
-            System.out.println("Godina: " + student.getGodina());
-            System.out.println("Maticni broj: " + student.getMaticniBroj());
-            System.out.println("Ocjena: " + student.getProsjecna_ocjena());
-            System.out.println("-------------------------------------------------------");
+            prosjek /= 10;
+            System.out.println("Prosjek svih studenata:");
+            System.out.println(prosjek);
         }
-        prosjek /= 10;
-        System.out.println("Prosjek svih studenata:");
-        System.out.println(prosjek);
-        in.close();
-        fileIn.close();
 
     }
 }
