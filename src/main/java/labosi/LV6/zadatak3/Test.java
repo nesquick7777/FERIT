@@ -22,13 +22,10 @@ public class Test {
         
         konj.radi();
         konj.kreceSe();
-        konj.vrsta();
         
         ptica.kreceSe();
-        ptica.vrsta();
         
         riba.kreceSe();
-        riba.vrsta();
 
         for (Zivotinja Test : obj) {
             Test.kreceSe();

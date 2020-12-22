@@ -11,5 +11,4 @@ package labosi.LV6.zadatak3;
  */
 public interface Zivotinja {
     public void kreceSe();
-    public void vrsta();
 }

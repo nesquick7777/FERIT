@@ -20,8 +20,4 @@ public class Ptica implements Zivotinja{
     public void kreceSe(){
         System.out.println("Ptica: letim");
     }
-    @Override
-    public void vrsta() {
-        System.out.println(this.getClass().toString());
-    }
 }

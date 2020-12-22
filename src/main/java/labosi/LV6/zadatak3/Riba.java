@@ -19,9 +19,4 @@ public class Riba implements Zivotinja{
     public void kreceSe(){
         System.out.println("Riba: plivam");
     }
-    
-    @Override
-    public void vrsta() {
-        System.out.println(this.getClass().toString());
-    }
 }

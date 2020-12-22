@@ -25,9 +25,4 @@ public class Konj implements Zivotinja, Radni{
     public void radi() {
         System.out.println("Tegli");
     }
-    
-    @Override
-    public void vrsta() {
-        System.out.println(this.getClass().toString());
-    }
 }
