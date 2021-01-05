@@ -3,38 +3,31 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package labosi.LV7.zadatak1;
+package labosi.LV7.zadatak2;
+
+import com.github.javafaker.Faker;
 
 /**
  *
  * @author Bole
  */
-public class Raketa extends Thread{
+public class Raketa implements Runnable{
     String ime;
     LansirnaRampa lansirnaLampa;
-
-    public Raketa() {
-    }
-
-    public String getIme() {
-        return ime;
-    }
-
-    public void setIme(String ime) {
-        this.ime = ime;
-    }
 
     @Override
     public void run(){
         lansirnaLampa = new LansirnaRampa();
+        Faker faker = new Faker();
+        ime =faker.color().name().toUpperCase()+" "+faker.space().star();
         try {
-        System.out.println(this.ime+":");
+        System.out.println(ime +":");
         System.out.println("Pokrenuto lansiranje!");
         lansirnaLampa.lansiranje();
         } catch (Exception e) {
-            System.out.println("Greška pri lansiranju");
+            System.out.println(e);
         }
-        System.out.println(this.ime+":");
+        System.out.println(ime+":");
         System.out.println("Lansiranje je uspješno!");
         
     }
