@@ -11,10 +11,11 @@ package labosi.LV7.zadatak1;
  */
 public class Raketa extends Thread{
     String ime;
-    LansirnaRampa lansirnaLampa;
+    LansirnaRampa lansirnaRampa;
 
     public Raketa() {
     }
+
 
     public String getIme() {
         return ime;
@@ -26,11 +27,11 @@ public class Raketa extends Thread{
 
     @Override
     public void run(){
-        lansirnaLampa = new LansirnaRampa();
+        lansirnaRampa = new LansirnaRampa();
         try {
         System.out.println(this.ime+":");
         System.out.println("Pokrenuto lansiranje!");
-        lansirnaLampa.lansiranje();
+        lansirnaRampa.lansiranje();
         } catch (Exception e) {
             System.out.println("Greška pri lansiranju");
         }

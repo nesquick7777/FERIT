@@ -13,17 +13,17 @@ import com.github.javafaker.Faker;
  */
 public class Raketa implements Runnable{
     String ime;
-    LansirnaRampa lansirnaLampa;
+    LansirnaRampa lansirnaRampa;
 
     @Override
     public void run(){
-        lansirnaLampa = new LansirnaRampa();
+        lansirnaRampa = new LansirnaRampa();
         Faker faker = new Faker();
         ime =faker.color().name().toUpperCase()+" "+faker.space().star();
         try {
         System.out.println(ime +":");
         System.out.println("Pokrenuto lansiranje!");
-        lansirnaLampa.lansiranje();
+        lansirnaRampa.lansiranje();
         } catch (Exception e) {
             System.out.println(e);
         }
