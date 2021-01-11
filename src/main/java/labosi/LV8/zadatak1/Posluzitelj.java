@@ -20,11 +20,10 @@ import java.util.logging.Logger;
  *
  * @author Bole
  */
-public class Posluzitelj implements Runnable{
+public class Posluzitelj{
 
     
-    @Override
-    public void run(){
+    public static void main(String[] args) {
         try {
             String linija;
             BufferedReader is;

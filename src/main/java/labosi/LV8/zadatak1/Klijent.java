@@ -20,9 +20,9 @@ import java.util.logging.Logger;
  *
  * @author Bole
  */
-public class Klijent implements Runnable{
+public class Klijent{
 
-    public void run(){
+    public static void main(String[] args) {
         try {
             String host = "127.0.0.1";
             int port = 9999;
