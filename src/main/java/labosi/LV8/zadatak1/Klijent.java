@@ -13,6 +13,7 @@ import java.io.OutputStream;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -20,30 +21,31 @@ import java.util.logging.Logger;
  *
  * @author Bole
  */
-public class Klijent{
+public class Klijent {
 
     public static void main(String[] args) {
         try {
             String host = "127.0.0.1";
             int port = 9999;
             Socket klijent = new Socket(host, port);
-            
+
             System.out.println(
                     "Klijent: " + klijent);
             InputStream in = klijent.getInputStream();
             OutputStream out = klijent.getOutputStream();
             BufferedReader bis = new BufferedReader(new InputStreamReader(in));
             PrintWriter ps = new PrintWriter(new PrintStream(out), true /* autoflush */);
-            String[] eho = {"poruka1", "psovka2", "uvreda3", "bye"};
-            for (int i = 0; i < eho.length;++i){
-                
-                    ps.println(eho[i]);
-      
-            }
-            String linija = null;
-            while ((linija = bis.readLine()) != null) {
-                System.out.println(linija);
-            }
+            Scanner input_ = new Scanner(System.in);
+            String unos;
+            System.out.println("Poruka: ");
+            unos = input_.nextLine();
+            
+            ps.println(unos);
+            
+            String linija = bis.readLine();
+            System.out.println();
+            System.out.println(linija);
+            
         } catch (IOException ex) {
             Logger.getLogger(Klijent.class.getName()).log(Level.SEVERE, null, ex);
         }

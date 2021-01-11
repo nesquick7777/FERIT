@@ -20,9 +20,8 @@ import java.util.logging.Logger;
  *
  * @author Bole
  */
-public class Posluzitelj{
+public class Posluzitelj {
 
-    
     public static void main(String[] args) {
         try {
             String linija;
@@ -30,28 +29,27 @@ public class Posluzitelj{
             PrintWriter os;
             ServerSocket echoServer;
             Socket clientSocket;
-            
+
             echoServer = new ServerSocket();
             echoServer.bind(new InetSocketAddress("127.0.0.1", 9999));
             System.out.println("Postavljeni posluzitelj:" + "" + echoServer.toString());
-            
+
             clientSocket = echoServer.accept();
             System.out.println("Server>> Imamo klijenta: " + clientSocket.getInetAddress());
             is = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
             os = new PrintWriter(new OutputStreamWriter(clientSocket.getOutputStream()), true);
-            boolean done = false;
-            
-            while (!done && (linija = is.readLine()) != null) {
-                if("psovka2".equals(linija) || "uvreda3".equals(linija)){
-                linija="*******";
-                    os.println("Echo: " + linija);
-                }else{
-                    os.println("Echo: " + linija.toUpperCase());
-                }
-                if (linija.trim().equals("BYE")) {
-                    done = true;
-                }
+
+            linija = is.readLine();
+            if (linija.contains("psovka1") || linija.contains("psovka2") || linija.contains("psovka3") || linija.contains("uvreda1") || linija.contains("uvreda2") || linija.contains("uvreda3")) {
+                linija = linija.replace("psovka1", "*******");
+                linija = linija.replace("psovka2", "*******");
+                linija = linija.replace("psovka3", "*******");
+                linija = linija.replace("uvreda1", "*******");
+                linija = linija.replace("uvreda2", "*******");
+                linija = linija.replace("uvreda3", "*******");
             }
+            os.println("Echo: " + linija);
+
         } catch (IOException ex) {
             Logger.getLogger(Posluzitelj.class.getName()).log(Level.SEVERE, null, ex);
         }
