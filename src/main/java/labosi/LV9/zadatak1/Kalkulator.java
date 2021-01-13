@@ -5,6 +5,11 @@
  */
 package labosi.LV9.zadatak1;
 
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Bole
@@ -59,11 +64,6 @@ public class Kalkulator extends javax.swing.JFrame {
         btnRezultat.setBackground(new java.awt.Color(255, 255, 255));
         btnRezultat.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnRezultat.setText("=");
-        btnRezultat.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnZagradaOtvMouseReleased(evt);
-            }
-        });
         btnRezultat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRezultatActionPerformed(evt);
@@ -222,11 +222,6 @@ public class Kalkulator extends javax.swing.JFrame {
         btn4.setBackground(new java.awt.Color(255, 255, 255));
         btn4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btn4.setText("4");
-        btn4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnZagradaOtvMouseReleased(evt);
-            }
-        });
         btn4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn4ActionPerformed(evt);
@@ -356,7 +351,7 @@ public class Kalkulator extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtRacunanje, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 37, Short.MAX_VALUE)
+                        .addGap(0, 22, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(btn4)
@@ -393,16 +388,16 @@ public class Kalkulator extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btnOduzimanje, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
-                            .addComponent(btnDjeljenje, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
                             .addComponent(btnMnozenje, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
                             .addComponent(btnZbrajanje, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
                             .addComponent(btnRezultat, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
-                            .addComponent(btnMod, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btnMod, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnDjeljenje, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(20, 20, 20)))
                 .addContainerGap())
         );
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {brnBrisanje, btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnDelete, btnDjeljenje, btnMnozenje, btnOduzimanje, btnRezultat, btnTocka, btnZagradaOtv, btnZagradaZat, btnZbrajanje});
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {brnBrisanje, btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnDelete, btnMnozenje, btnOduzimanje, btnRezultat, btnTocka, btnZagradaOtv, btnZagradaZat, btnZbrajanje});
 
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -461,83 +456,110 @@ public class Kalkulator extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnOduzimanjeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOduzimanjeActionPerformed
-        txtRacunanje.setText(txtRacunanje.getText()+"-");
+        if (txtRacunanje.getText().endsWith("+") || txtRacunanje.getText().endsWith("+") || txtRacunanje.getText().endsWith("-") || txtRacunanje.getText().endsWith("*") || txtRacunanje.getText().endsWith("/") || txtRacunanje.getText().endsWith(".") || txtRacunanje.getText().endsWith("%")) {
+        } else {
+            txtRacunanje.setText(txtRacunanje.getText() + "-");
+        }
     }//GEN-LAST:event_btnOduzimanjeActionPerformed
 
     private void btnZagradaOtvMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnZagradaOtvMouseReleased
-       
+
     }//GEN-LAST:event_btnZagradaOtvMouseReleased
 
     private void btnTockaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTockaActionPerformed
-        txtRacunanje.setText(txtRacunanje.getText()+".");
+        if (txtRacunanje.getText().endsWith("+") || txtRacunanje.getText().endsWith("+") || txtRacunanje.getText().endsWith("-") || txtRacunanje.getText().endsWith("*") || txtRacunanje.getText().endsWith("/") || txtRacunanje.getText().endsWith(".") || txtRacunanje.getText().endsWith("%")) {
+        } else {
+            txtRacunanje.setText(txtRacunanje.getText() + ".");
+        }
     }//GEN-LAST:event_btnTockaActionPerformed
 
     private void btn0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn0ActionPerformed
-        txtRacunanje.setText(txtRacunanje.getText()+"0");
+        txtRacunanje.setText(txtRacunanje.getText() + "0");
     }//GEN-LAST:event_btn0ActionPerformed
 
     private void btnZagradaZatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnZagradaZatActionPerformed
-        txtRacunanje.setText(txtRacunanje.getText()+")");
+        txtRacunanje.setText(txtRacunanje.getText() + ")");
     }//GEN-LAST:event_btnZagradaZatActionPerformed
 
     private void btnRezultatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRezultatActionPerformed
+        if (txtRacunanje.getText().isEmpty() || txtRacunanje.getText() == null) {
+            JOptionPane.showMessageDialog(null, "Niste ništa unijeli!");
+            return;
+        }
+
+        ScriptEngineManager mgr = new ScriptEngineManager();
+        ScriptEngine engine = mgr.getEngineByName("JavaScript");
         String izracun = txtRacunanje.getText();
-        
-        txtRacunanje.setText(izracun.toString());
+        try {
+            txtRacunanje.setText(engine.eval(izracun).toString());
+        } catch (ScriptException ex) {
+            JOptionPane.showMessageDialog(null, "Krivo ste unijeli zapis, pokusajte ponovno!");
+        }
+
     }//GEN-LAST:event_btnRezultatActionPerformed
 
     private void btnZbrajanjeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnZbrajanjeActionPerformed
-        txtRacunanje.setText(txtRacunanje.getText()+"+");
+
+        if (txtRacunanje.getText().endsWith("+") || txtRacunanje.getText().endsWith("+") || txtRacunanje.getText().endsWith("-") || txtRacunanje.getText().endsWith("*") || txtRacunanje.getText().endsWith("/") || txtRacunanje.getText().endsWith(".") || txtRacunanje.getText().endsWith("%")) {
+        } else {
+            txtRacunanje.setText(txtRacunanje.getText() + "+");
+        }
     }//GEN-LAST:event_btnZbrajanjeActionPerformed
 
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-        txtRacunanje.setText(txtRacunanje.getText()+"1");
+        txtRacunanje.setText(txtRacunanje.getText() + "1");
     }//GEN-LAST:event_btn1ActionPerformed
 
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
-        txtRacunanje.setText(txtRacunanje.getText()+"2");
+        txtRacunanje.setText(txtRacunanje.getText() + "2");
     }//GEN-LAST:event_btn2ActionPerformed
 
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
-        txtRacunanje.setText(txtRacunanje.getText()+"3");
+        txtRacunanje.setText(txtRacunanje.getText() + "3");
     }//GEN-LAST:event_btn3ActionPerformed
 
     private void btnMnozenjeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMnozenjeActionPerformed
-        txtRacunanje.setText(txtRacunanje.getText()+"*");
+        if (txtRacunanje.getText().endsWith("+") || txtRacunanje.getText().endsWith("+") || txtRacunanje.getText().endsWith("-") || txtRacunanje.getText().endsWith("*") || txtRacunanje.getText().endsWith("/") || txtRacunanje.getText().endsWith(".") || txtRacunanje.getText().endsWith("%")) {
+        } else {
+            txtRacunanje.setText(txtRacunanje.getText() + "*");
+        }
     }//GEN-LAST:event_btnMnozenjeActionPerformed
 
     private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
-        txtRacunanje.setText(txtRacunanje.getText()+"6");
+        txtRacunanje.setText(txtRacunanje.getText() + "6");
     }//GEN-LAST:event_btn6ActionPerformed
 
     private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
-        txtRacunanje.setText(txtRacunanje.getText()+"5");
+        txtRacunanje.setText(txtRacunanje.getText() + "5");
     }//GEN-LAST:event_btn5ActionPerformed
 
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
-        txtRacunanje.setText(txtRacunanje.getText()+"4");
+        txtRacunanje.setText(txtRacunanje.getText() + "4");
     }//GEN-LAST:event_btn4ActionPerformed
 
     private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
-        txtRacunanje.setText(txtRacunanje.getText()+"7");
+        txtRacunanje.setText(txtRacunanje.getText() + "7");
     }//GEN-LAST:event_btn7ActionPerformed
 
     private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
-        txtRacunanje.setText(txtRacunanje.getText()+"8");
+        txtRacunanje.setText(txtRacunanje.getText() + "8");
     }//GEN-LAST:event_btn8ActionPerformed
 
     private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
-        txtRacunanje.setText(txtRacunanje.getText()+"9");
+        txtRacunanje.setText(txtRacunanje.getText() + "9");
     }//GEN-LAST:event_btn9ActionPerformed
 
     private void btnDjeljenjeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDjeljenjeActionPerformed
-        txtRacunanje.setText(txtRacunanje.getText()+"/");
+        if (txtRacunanje.getText().endsWith("+") || txtRacunanje.getText().endsWith("+") || txtRacunanje.getText().endsWith("-") || txtRacunanje.getText().endsWith("*") || txtRacunanje.getText().endsWith("/") || txtRacunanje.getText().endsWith(".") || txtRacunanje.getText().endsWith("%")) {
+        } else {
+            txtRacunanje.setText(txtRacunanje.getText() + "/");
+        }
     }//GEN-LAST:event_btnDjeljenjeActionPerformed
 
     private void brnBrisanjeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brnBrisanjeActionPerformed
-       if (txtRacunanje.getText() != null && txtRacunanje.getText().length() > 0) {
-        txtRacunanje.setText(txtRacunanje.getText().substring(0, txtRacunanje.getText().length() - 1));
-       }
+        if (txtRacunanje.getText() != null && txtRacunanje.getText().length() > 0) {
+            txtRacunanje.setText(txtRacunanje.getText().substring(0, txtRacunanje.getText().length() - 1));
+        }
     }//GEN-LAST:event_brnBrisanjeActionPerformed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
@@ -545,11 +567,14 @@ public class Kalkulator extends javax.swing.JFrame {
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void btnModActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModActionPerformed
-        txtRacunanje.setText(txtRacunanje.getText()+"%");
+        if (txtRacunanje.getText().endsWith("+") || txtRacunanje.getText().endsWith("+") || txtRacunanje.getText().endsWith("-") || txtRacunanje.getText().endsWith("*") || txtRacunanje.getText().endsWith("/") || txtRacunanje.getText().endsWith(".") || txtRacunanje.getText().endsWith("%")) {
+        } else {
+            txtRacunanje.setText(txtRacunanje.getText() + "%");
+        }
     }//GEN-LAST:event_btnModActionPerformed
 
     private void btnZagradaOtvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnZagradaOtvActionPerformed
-         txtRacunanje.setText(txtRacunanje.getText()+"(");
+        txtRacunanje.setText(txtRacunanje.getText() + "(");
     }//GEN-LAST:event_btnZagradaOtvActionPerformed
 
     /**

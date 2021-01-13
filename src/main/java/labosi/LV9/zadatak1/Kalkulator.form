@@ -49,7 +49,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="txtRacunanje" alignment="1" max="32767" attributes="0"/>
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="0" pref="37" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="22" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="btn4" linkSize="1" min="-2" max="-2" attributes="0"/>
@@ -95,11 +95,11 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="btnOduzimanje" linkSize="1" pref="51" max="32767" attributes="0"/>
-                              <Component id="btnDjeljenje" linkSize="1" alignment="0" pref="51" max="32767" attributes="0"/>
                               <Component id="btnMnozenje" linkSize="1" alignment="0" pref="51" max="32767" attributes="0"/>
                               <Component id="btnZbrajanje" linkSize="1" pref="51" max="32767" attributes="0"/>
                               <Component id="btnRezultat" linkSize="1" alignment="0" pref="51" max="32767" attributes="0"/>
-                              <Component id="btnMod" alignment="0" min="-2" pref="55" max="-2" attributes="0"/>
+                              <Component id="btnMod" alignment="0" max="32767" attributes="0"/>
+                              <Component id="btnDjeljenje" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
@@ -167,7 +167,6 @@
             <Property name="text" type="java.lang.String" value="="/>
           </Properties>
           <Events>
-            <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnZagradaOtvMouseReleased"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRezultatActionPerformed"/>
           </Events>
         </Component>
@@ -346,7 +345,6 @@
             <Property name="text" type="java.lang.String" value="4"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnZagradaOtvMouseReleased"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn4ActionPerformed"/>
           </Events>
         </Component>
