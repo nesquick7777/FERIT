@@ -73,11 +73,6 @@ public class Kalkulator extends javax.swing.JFrame {
         btnOduzimanje.setBackground(new java.awt.Color(255, 255, 255));
         btnOduzimanje.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnOduzimanje.setText("-");
-        btnOduzimanje.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnZagradaOtvMouseReleased(evt);
-            }
-        });
         btnOduzimanje.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOduzimanjeActionPerformed(evt);
@@ -87,11 +82,6 @@ public class Kalkulator extends javax.swing.JFrame {
         btnZbrajanje.setBackground(new java.awt.Color(255, 255, 255));
         btnZbrajanje.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnZbrajanje.setText("+");
-        btnZbrajanje.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnZagradaOtvMouseReleased(evt);
-            }
-        });
         btnZbrajanje.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnZbrajanjeActionPerformed(evt);
@@ -101,11 +91,6 @@ public class Kalkulator extends javax.swing.JFrame {
         btnMnozenje.setBackground(new java.awt.Color(255, 255, 255));
         btnMnozenje.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnMnozenje.setText("*");
-        btnMnozenje.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnZagradaOtvMouseReleased(evt);
-            }
-        });
         btnMnozenje.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMnozenjeActionPerformed(evt);
@@ -115,11 +100,6 @@ public class Kalkulator extends javax.swing.JFrame {
         btnDjeljenje.setBackground(new java.awt.Color(255, 255, 255));
         btnDjeljenje.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnDjeljenje.setText("/");
-        btnDjeljenje.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnZagradaOtvMouseReleased(evt);
-            }
-        });
         btnDjeljenje.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDjeljenjeActionPerformed(evt);
@@ -129,11 +109,6 @@ public class Kalkulator extends javax.swing.JFrame {
         btnMod.setBackground(new java.awt.Color(255, 255, 255));
         btnMod.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnMod.setText("%");
-        btnMod.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnZagradaOtvMouseReleased(evt);
-            }
-        });
         btnMod.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnModActionPerformed(evt);
@@ -143,11 +118,6 @@ public class Kalkulator extends javax.swing.JFrame {
         btnDelete.setBackground(new java.awt.Color(255, 255, 255));
         btnDelete.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnDelete.setText("C");
-        btnDelete.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnZagradaOtvMouseReleased(evt);
-            }
-        });
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteActionPerformed(evt);
@@ -157,11 +127,6 @@ public class Kalkulator extends javax.swing.JFrame {
         btn0.setBackground(new java.awt.Color(255, 255, 255));
         btn0.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btn0.setText("0");
-        btn0.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnZagradaOtvMouseReleased(evt);
-            }
-        });
         btn0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn0ActionPerformed(evt);
@@ -171,11 +136,6 @@ public class Kalkulator extends javax.swing.JFrame {
         btnTocka.setBackground(new java.awt.Color(255, 255, 255));
         btnTocka.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnTocka.setText(".");
-        btnTocka.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnZagradaOtvMouseReleased(evt);
-            }
-        });
         btnTocka.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTockaActionPerformed(evt);
@@ -185,11 +145,6 @@ public class Kalkulator extends javax.swing.JFrame {
         btnZagradaZat.setBackground(new java.awt.Color(255, 255, 255));
         btnZagradaZat.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnZagradaZat.setText(")");
-        btnZagradaZat.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnZagradaOtvMouseReleased(evt);
-            }
-        });
         btnZagradaZat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnZagradaZatActionPerformed(evt);
@@ -208,11 +163,6 @@ public class Kalkulator extends javax.swing.JFrame {
         brnBrisanje.setBackground(new java.awt.Color(255, 255, 255));
         brnBrisanje.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         brnBrisanje.setText("DEL");
-        brnBrisanje.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnZagradaOtvMouseReleased(evt);
-            }
-        });
         brnBrisanje.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 brnBrisanjeActionPerformed(evt);
@@ -231,11 +181,6 @@ public class Kalkulator extends javax.swing.JFrame {
         btn1.setBackground(new java.awt.Color(255, 255, 255));
         btn1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btn1.setText("1");
-        btn1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnZagradaOtvMouseReleased(evt);
-            }
-        });
         btn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn1ActionPerformed(evt);
@@ -245,11 +190,6 @@ public class Kalkulator extends javax.swing.JFrame {
         btn7.setBackground(new java.awt.Color(255, 255, 255));
         btn7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btn7.setText("7");
-        btn7.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnZagradaOtvMouseReleased(evt);
-            }
-        });
         btn7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn7ActionPerformed(evt);
@@ -261,11 +201,6 @@ public class Kalkulator extends javax.swing.JFrame {
         btn8.setBackground(new java.awt.Color(255, 255, 255));
         btn8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btn8.setText("8");
-        btn8.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnZagradaOtvMouseReleased(evt);
-            }
-        });
         btn8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn8ActionPerformed(evt);
@@ -275,11 +210,6 @@ public class Kalkulator extends javax.swing.JFrame {
         btn9.setBackground(new java.awt.Color(255, 255, 255));
         btn9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btn9.setText("9");
-        btn9.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnZagradaOtvMouseReleased(evt);
-            }
-        });
         btn9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn9ActionPerformed(evt);
@@ -289,11 +219,6 @@ public class Kalkulator extends javax.swing.JFrame {
         btn5.setBackground(new java.awt.Color(255, 255, 255));
         btn5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btn5.setText("5");
-        btn5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnZagradaOtvMouseReleased(evt);
-            }
-        });
         btn5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn5ActionPerformed(evt);
@@ -303,11 +228,6 @@ public class Kalkulator extends javax.swing.JFrame {
         btn6.setBackground(new java.awt.Color(255, 255, 255));
         btn6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btn6.setText("6");
-        btn6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnZagradaOtvMouseReleased(evt);
-            }
-        });
         btn6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn6ActionPerformed(evt);
@@ -317,11 +237,6 @@ public class Kalkulator extends javax.swing.JFrame {
         btn2.setBackground(new java.awt.Color(255, 255, 255));
         btn2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btn2.setText("2");
-        btn2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnZagradaOtvMouseReleased(evt);
-            }
-        });
         btn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn2ActionPerformed(evt);
@@ -331,11 +246,6 @@ public class Kalkulator extends javax.swing.JFrame {
         btn3.setBackground(new java.awt.Color(255, 255, 255));
         btn3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btn3.setText("3");
-        btn3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnZagradaOtvMouseReleased(evt);
-            }
-        });
         btn3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn3ActionPerformed(evt);
@@ -441,33 +351,32 @@ public class Kalkulator extends javax.swing.JFrame {
 
         jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {brnBrisanje, btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnDelete, btnDjeljenje, btnMnozenje, btnMod, btnOduzimanje, btnRezultat, btnTocka, btnZagradaOtv, btnZagradaZat, btnZbrajanje});
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnOduzimanjeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOduzimanjeActionPerformed
+        if (txtRacunanje.getText().isEmpty() || txtRacunanje.getText() == null) {
+            JOptionPane.showMessageDialog(null, "Prvo unesite broj");
+            return;
+        }
         if (txtRacunanje.getText().endsWith("+") || txtRacunanje.getText().endsWith("+") || txtRacunanje.getText().endsWith("-") || txtRacunanje.getText().endsWith("*") || txtRacunanje.getText().endsWith("/") || txtRacunanje.getText().endsWith(".") || txtRacunanje.getText().endsWith("%")) {
+            txtRacunanje.setText(txtRacunanje.getText().substring(0, txtRacunanje.getText().length() - 1));
+            txtRacunanje.setText(txtRacunanje.getText() + "-");
         } else {
             txtRacunanje.setText(txtRacunanje.getText() + "-");
         }
     }//GEN-LAST:event_btnOduzimanjeActionPerformed
 
-    private void btnZagradaOtvMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnZagradaOtvMouseReleased
-
-    }//GEN-LAST:event_btnZagradaOtvMouseReleased
-
     private void btnTockaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTockaActionPerformed
+        if (txtRacunanje.getText().isEmpty() || txtRacunanje.getText() == null) {
+            JOptionPane.showMessageDialog(null, "Prvo unesite broj");
+            return;
+        }
         if (txtRacunanje.getText().endsWith("+") || txtRacunanje.getText().endsWith("+") || txtRacunanje.getText().endsWith("-") || txtRacunanje.getText().endsWith("*") || txtRacunanje.getText().endsWith("/") || txtRacunanje.getText().endsWith(".") || txtRacunanje.getText().endsWith("%")) {
+            txtRacunanje.setText(txtRacunanje.getText().substring(0, txtRacunanje.getText().length() - 1));
+            txtRacunanje.setText(txtRacunanje.getText() + ".");
         } else {
             txtRacunanje.setText(txtRacunanje.getText() + ".");
         }
@@ -486,7 +395,6 @@ public class Kalkulator extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Niste ništa unijeli!");
             return;
         }
-
         ScriptEngineManager mgr = new ScriptEngineManager();
         ScriptEngine engine = mgr.getEngineByName("JavaScript");
         String izracun = txtRacunanje.getText();
@@ -499,8 +407,13 @@ public class Kalkulator extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRezultatActionPerformed
 
     private void btnZbrajanjeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnZbrajanjeActionPerformed
-
+        if (txtRacunanje.getText().isEmpty() || txtRacunanje.getText() == null) {
+            JOptionPane.showMessageDialog(null, "Prvo unesite broj");
+            return;
+        }
         if (txtRacunanje.getText().endsWith("+") || txtRacunanje.getText().endsWith("+") || txtRacunanje.getText().endsWith("-") || txtRacunanje.getText().endsWith("*") || txtRacunanje.getText().endsWith("/") || txtRacunanje.getText().endsWith(".") || txtRacunanje.getText().endsWith("%")) {
+            txtRacunanje.setText(txtRacunanje.getText().substring(0, txtRacunanje.getText().length() - 1));
+            txtRacunanje.setText(txtRacunanje.getText() + "+");
         } else {
             txtRacunanje.setText(txtRacunanje.getText() + "+");
         }
@@ -519,7 +432,13 @@ public class Kalkulator extends javax.swing.JFrame {
     }//GEN-LAST:event_btn3ActionPerformed
 
     private void btnMnozenjeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMnozenjeActionPerformed
+        if (txtRacunanje.getText().isEmpty() || txtRacunanje.getText() == null) {
+            JOptionPane.showMessageDialog(null, "Prvo unesite broj");
+            return;
+        }
         if (txtRacunanje.getText().endsWith("+") || txtRacunanje.getText().endsWith("+") || txtRacunanje.getText().endsWith("-") || txtRacunanje.getText().endsWith("*") || txtRacunanje.getText().endsWith("/") || txtRacunanje.getText().endsWith(".") || txtRacunanje.getText().endsWith("%")) {
+            txtRacunanje.setText(txtRacunanje.getText().substring(0, txtRacunanje.getText().length() - 1));
+            txtRacunanje.setText(txtRacunanje.getText() + "*");
         } else {
             txtRacunanje.setText(txtRacunanje.getText() + "*");
         }
@@ -550,7 +469,13 @@ public class Kalkulator extends javax.swing.JFrame {
     }//GEN-LAST:event_btn9ActionPerformed
 
     private void btnDjeljenjeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDjeljenjeActionPerformed
+        if (txtRacunanje.getText().isEmpty() || txtRacunanje.getText() == null) {
+            JOptionPane.showMessageDialog(null, "Prvo unesite broj");
+            return;
+        }
         if (txtRacunanje.getText().endsWith("+") || txtRacunanje.getText().endsWith("+") || txtRacunanje.getText().endsWith("-") || txtRacunanje.getText().endsWith("*") || txtRacunanje.getText().endsWith("/") || txtRacunanje.getText().endsWith(".") || txtRacunanje.getText().endsWith("%")) {
+            txtRacunanje.setText(txtRacunanje.getText().substring(0, txtRacunanje.getText().length() - 1));
+            txtRacunanje.setText(txtRacunanje.getText() + "/");
         } else {
             txtRacunanje.setText(txtRacunanje.getText() + "/");
         }
@@ -567,7 +492,13 @@ public class Kalkulator extends javax.swing.JFrame {
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void btnModActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModActionPerformed
+        if (txtRacunanje.getText().isEmpty() || txtRacunanje.getText() == null) {
+            JOptionPane.showMessageDialog(null, "Prvo unesite broj");
+            return;
+        }
         if (txtRacunanje.getText().endsWith("+") || txtRacunanje.getText().endsWith("+") || txtRacunanje.getText().endsWith("-") || txtRacunanje.getText().endsWith("*") || txtRacunanje.getText().endsWith("/") || txtRacunanje.getText().endsWith(".") || txtRacunanje.getText().endsWith("%")) {
+            txtRacunanje.setText(txtRacunanje.getText().substring(0, txtRacunanje.getText().length() - 1));
+            txtRacunanje.setText(txtRacunanje.getText() + "%");
         } else {
             txtRacunanje.setText(txtRacunanje.getText() + "%");
         }
@@ -606,6 +537,7 @@ public class Kalkulator extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new Kalkulator().setVisible(true);
             }
@@ -637,4 +569,5 @@ public class Kalkulator extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txtRacunanje;
     // End of variables declaration//GEN-END:variables
+
 }
