@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package labosi.LV10.zadatak2;
 
 /**
@@ -5,20 +10,17 @@ package labosi.LV10.zadatak2;
  * @author Bole
  */
 public class Test {
-
     public static void main(String[] args) {
         Ptica ptica = new Ptica();
         Lastavica lastavica = new Lastavica();
-        Zivotinja obj[] = new Zivotinja[2];
-        obj[0] = ptica;
-        obj[0].setIme("Cool Ptica");
-        obj[1] = lastavica;
-        obj[1].setIme("Cool Lastavica");
-
-        for (Zivotinja test : obj) {
-            System.out.println(test.getIme());
-            test.glasajSe();
-        }
-
+        
+        ptica.setIme("Cool Ptica");
+        System.out.println("PTICA: "+ptica.getIme());
+        ptica.glasajSe();
+        
+        lastavica.setIme("Cool Lastavica");
+        System.out.println("LASTAVICA: "+lastavica.getIme());
+        lastavica.glasajSe();
+        
     }
 }
