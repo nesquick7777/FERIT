@@ -5,6 +5,9 @@
  */
 package Kolokvij.zadatak2;
 
+//   Serijalizacija u Javi je mehanizam zapisivanja stanja objekta u byte-stream tj u trajnu pohranu poput diskovnih datoteka, 
+//   baza podataka ili slanje stanja objekta putem mreže. 
+
 import java.io.Serializable;  
 public class Student implements Serializable{  
  int id;  
